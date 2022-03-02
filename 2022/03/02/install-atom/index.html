@@ -5,17 +5,17 @@
   
 
   
-  <title>Debian 清除已删除软件包的配置文件 | Wis的第一个博客系统</title>
+  <title>Debian安装atom文本编辑器 | Wis的第一个博客系统</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="命令如下： 1dpkg -l | grep &quot;^rc&quot; | awk &amp;#x27;&amp;#123;print $2&amp;#125;&amp;#x27; | xargs aptitude -y purge 用途：删除已经删除的软件包的残留配置文件。因为debian系统中remove包不删除配置文件，而purge可以删除，所以安装卸载的软件多了，可以用这个清理残留配置文件。 说明：1） dpkg -">
+  <meta name="description" content="在本教程中，我们将向您展示如何在Debian 10系统上安装Atom文本编辑器。对于那些不知道的人来说，Atom是一个开源的文本编辑器，它是由GitHub开发的现代。Atom使用HTML、CSS、JS和其他网络技术构建。它默认支持超过35种以上的编程语言。Atom是一个使用Web技术构建的桌面应用程序。大部分的扩展包都有免费的软件授权，并且是社区构建和维护的。Atom基于Electron(原名At">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Debian 清除已删除软件包的配置文件">
-<meta property="og:url" content="http://example.com/2022/03/01/My-New-Post/index.html">
+<meta property="og:title" content="Debian安装atom文本编辑器">
+<meta property="og:url" content="http://example.com/2022/03/02/install-atom/index.html">
 <meta property="og:site_name" content="Wis的第一个博客系统">
-<meta property="og:description" content="命令如下： 1dpkg -l | grep &quot;^rc&quot; | awk &amp;#x27;&amp;#123;print $2&amp;#125;&amp;#x27; | xargs aptitude -y purge 用途：删除已经删除的软件包的残留配置文件。因为debian系统中remove包不删除配置文件，而purge可以删除，所以安装卸载的软件多了，可以用这个清理残留配置文件。 说明：1） dpkg -">
+<meta property="og:description" content="在本教程中，我们将向您展示如何在Debian 10系统上安装Atom文本编辑器。对于那些不知道的人来说，Atom是一个开源的文本编辑器，它是由GitHub开发的现代。Atom使用HTML、CSS、JS和其他网络技术构建。它默认支持超过35种以上的编程语言。Atom是一个使用Web技术构建的桌面应用程序。大部分的扩展包都有免费的软件授权，并且是社区构建和维护的。Atom基于Electron(原名At">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-01T07:53:38.000Z">
-<meta property="article:modified_time" content="2022-03-01T08:42:26.817Z">
+<meta property="article:published_time" content="2022-03-02T12:24:57.000Z">
+<meta property="article:modified_time" content="2022-03-02T12:31:31.847Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Debian系统学习">
 <meta name="twitter:card" content="summary">
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-install-atom" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2022/03/01/My-New-Post/" class="article-date">
-  <time datetime="2022-03-01T07:53:38.000Z" itemprop="datePublished">2022-03-01</time>
+    <a href="/2022/03/02/install-atom/" class="article-date">
+  <time datetime="2022-03-02T12:24:57.000Z" itemprop="datePublished">2022-03-02</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Debian 清除已删除软件包的配置文件
+      Debian安装atom文本编辑器
     </h1>
   
 
@@ -89,15 +89,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l | grep <span class="string">&quot;^rc&quot;</span> | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs aptitude -y purge</span><br></pre></td></tr></table></figure>
-<p>用途：删除已经删除的软件包的残留配置文件。因为debian系统中remove包不删除配置文件，而purge可以删除，所以安装卸载的软件多了，可以用这个清理残留配置文件。</p>
-<p>说明：<br>1） dpkg -l<br>列出系统中安装的所有包的状态，’ii’开头的是正常安装的包，’rc’ 开头的是软件删除留下的配置文件包，其他状态则是有错误的状态。<br>2） grep “^rc”<br>提取以rc开头的包，即提取有残留配置文件的包的信息行。<br>3） awk ‘{print $2}’<br>打印这些包的名字，他们位于 dpkg -l 输出结果的第二个字段。<br>4） xargs aptitude -y purge<br>把第三部的输出放在 aptitude -y purge 后面，purge命令清除配置文件， -y参数自动对后面的 aptitude命令的提示回答是，这个参数是很危险的，一般情况下不要使用，因为在这个地方我们确定删除这些残留文件没有问题，所以才使用。</p>
+        <p>在本教程中，我们将向您展示如何在Debian 10系统上安装Atom文本编辑器。对于那些不知道的人来说，Atom是一个开源的文本编辑器，它是由GitHub开发的现代。Atom使用HTML、CSS、JS和其他网络技术构建。它默认支持超过35种以上的编程语言。Atom是一个使用Web技术构建的桌面应用程序。大部分的扩展包都有免费的软件授权，并且是社区构建和维护的。Atom基于Electron(原名Atom Shell)，是一个使用Chromium和Node.js实现跨平台桌面应用的框架。<br>1.在安装任何软件之前，通过apt在终端中运行以下命令来确保系统是最新的很重要：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+<p>2.在Debian 10上安装Atom Text Editor。<br>现在从其官方网站下载Atom文本编辑器Debian软件包文件，并使用以下命令在您的系统上安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://atom.io/download/deb -O atom.deb</span><br><span class="line">sudo dpkg -i atom.deb</span><br></pre></td></tr></table></figure>
+<p>您可以根据需要安装插件来扩展编辑器的功能。这些扩展在Atom中称为软件包，Atomapm在Linux中提供了一个方便的命令行实用程序来管理软件包。这样，在Atom中安装软件包就像在终端中键入以下简单命令一样容易：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apm search search_string</span><br><span class="line">sudo apm install package_name</span><br></pre></td></tr></table></figure>
+<p>3.访问Atom文本编辑器。<br>成功安装后，使用以下命令启动Atom文本编辑器或使用系统菜单启动器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atom</span><br></pre></td></tr></table></figure>
+<p>至此，您已经成功安装了Atom。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/01/My-New-Post/" data-id="cl09f7z8k0000kkr95grrbuhv" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/02/install-atom/" data-id="cl09jbwi40000str9b9bi2nln" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" rel="tag">Debian系统学习</a></li></ul>
@@ -108,19 +113,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/03/02/make-a-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Debian10搭建博客系统（一）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/03/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/03/02/make-a-blog/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Debian10搭建博客系统（一）</div>
     </a>
   
 </nav>

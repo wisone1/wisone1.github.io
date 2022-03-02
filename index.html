@@ -64,6 +64,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-install-atom" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/02/install-atom/" class="article-date">
+  <time datetime="2022-03-02T12:24:57.000Z" itemprop="datePublished">2022-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/02/install-atom/">Debian安装atom文本编辑器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在本教程中，我们将向您展示如何在Debian 10系统上安装Atom文本编辑器。对于那些不知道的人来说，Atom是一个开源的文本编辑器，它是由GitHub开发的现代。Atom使用HTML、CSS、JS和其他网络技术构建。它默认支持超过35种以上的编程语言。Atom是一个使用Web技术构建的桌面应用程序。大部分的扩展包都有免费的软件授权，并且是社区构建和维护的。Atom基于Electron(原名Atom Shell)，是一个使用Chromium和Node.js实现跨平台桌面应用的框架。<br>1.在安装任何软件之前，通过apt在终端中运行以下命令来确保系统是最新的很重要：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+<p>2.在Debian 10上安装Atom Text Editor。<br>现在从其官方网站下载Atom文本编辑器Debian软件包文件，并使用以下命令在您的系统上安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://atom.io/download/deb -O atom.deb</span><br><span class="line">sudo dpkg -i atom.deb</span><br></pre></td></tr></table></figure>
+<p>您可以根据需要安装插件来扩展编辑器的功能。这些扩展在Atom中称为软件包，Atomapm在Linux中提供了一个方便的命令行实用程序来管理软件包。这样，在Atom中安装软件包就像在终端中键入以下简单命令一样容易：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apm search search_string</span><br><span class="line">sudo apm install package_name</span><br></pre></td></tr></table></figure>
+<p>3.访问Atom文本编辑器。<br>成功安装后，使用以下命令启动Atom文本编辑器或使用系统菜单启动器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atom</span><br></pre></td></tr></table></figure>
+<p>至此，您已经成功安装了Atom。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/02/install-atom/" data-id="cl09jbwi40000str9b9bi2nln" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" rel="tag">Debian系统学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-make-a-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/03/02/make-a-blog/" class="article-date">
@@ -240,6 +287,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/03/02/install-atom/">Debian安装atom文本编辑器</a>
+          </li>
         
           <li>
             <a href="/2022/03/02/make-a-blog/">Debian10搭建博客系统（一）</a>
