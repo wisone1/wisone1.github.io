@@ -5,18 +5,19 @@
   
 
   
-  <title>iptables-sudy | Wis的博客</title>
+  <title>iptables简单设置 | Wis的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="wis的学习笔记">
+  <meta name="description" content="iptables简单学习笔记iptables是一款基于命令行的防火墙策略管理工具，有大量的参数，学习难度较大，比如”四表五链”等概念，这里只学习基本常用参数并搭配使用。iptables属于数据链路层服务，所以可以根据流量的源地址，目的地址，传输协议，服务类型等信息进行匹配。防火墙策略归的匹配顺序为从上至下，执行优先级亦是。一.常用参数即作用：12345678910111213-P			#设置默认策">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iptables-sudy">
+<meta property="og:title" content="iptables简单设置">
 <meta property="og:url" content="http://example.com/2022/03/08/iptables-sudy/index.html">
 <meta property="og:site_name" content="Wis的博客">
-<meta property="og:description" content="wis的学习笔记">
+<meta property="og:description" content="iptables简单学习笔记iptables是一款基于命令行的防火墙策略管理工具，有大量的参数，学习难度较大，比如”四表五链”等概念，这里只学习基本常用参数并搭配使用。iptables属于数据链路层服务，所以可以根据流量的源地址，目的地址，传输协议，服务类型等信息进行匹配。防火墙策略归的匹配顺序为从上至下，执行优先级亦是。一.常用参数即作用：12345678910111213-P			#设置默认策">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-08T04:21:43.000Z">
-<meta property="article:modified_time" content="2022-03-08T04:21:43.161Z">
+<meta property="article:modified_time" content="2022-03-08T06:30:16.364Z">
 <meta property="article:author" content="wis">
+<meta property="article:tag" content="Debian系统学习">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Wis的博客" type="application/atom+xml">
@@ -80,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      iptables-sudy
+      iptables简单设置
     </h1>
   
 
@@ -88,13 +89,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="iptables简单学习笔记"><a href="#iptables简单学习笔记" class="headerlink" title="iptables简单学习笔记"></a>iptables简单学习笔记</h1><h2 id="iptables是一款基于命令行的防火墙策略管理工具，有大量的参数，学习难度较大，比如”四表五链”等概念，这里只学习基本常用参数并搭配使用。"><a href="#iptables是一款基于命令行的防火墙策略管理工具，有大量的参数，学习难度较大，比如”四表五链”等概念，这里只学习基本常用参数并搭配使用。" class="headerlink" title="iptables是一款基于命令行的防火墙策略管理工具，有大量的参数，学习难度较大，比如”四表五链”等概念，这里只学习基本常用参数并搭配使用。"></a>iptables是一款基于命令行的防火墙策略管理工具，有大量的参数，学习难度较大，比如”四表五链”等概念，这里只学习基本常用参数并搭配使用。</h2><h2 id="iptables属于数据链路层服务，所以可以根据流量的源地址，目的地址，传输协议，服务类型等信息进行匹配。防火墙策略归的匹配顺序为从上至下，执行优先级亦是。"><a href="#iptables属于数据链路层服务，所以可以根据流量的源地址，目的地址，传输协议，服务类型等信息进行匹配。防火墙策略归的匹配顺序为从上至下，执行优先级亦是。" class="headerlink" title="iptables属于数据链路层服务，所以可以根据流量的源地址，目的地址，传输协议，服务类型等信息进行匹配。防火墙策略归的匹配顺序为从上至下，执行优先级亦是。"></a>iptables属于数据链路层服务，所以可以根据流量的源地址，目的地址，传输协议，服务类型等信息进行匹配。防火墙策略归的匹配顺序为从上至下，执行优先级亦是。</h2><h3 id="一-常用参数即作用："><a href="#一-常用参数即作用：" class="headerlink" title="一.常用参数即作用："></a>一.常用参数即作用：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-P			<span class="comment">#设置默认策略</span></span><br><span class="line">-F			<span class="comment">#清空规则链</span></span><br><span class="line">-L			<span class="comment">#查看规则链</span></span><br><span class="line">-A			<span class="comment">#在规则链的末尾追加入规则</span></span><br><span class="line">-I num			<span class="comment">#在规则链的头部追加入规则</span></span><br><span class="line">-D num			<span class="comment">#删除某一条规则</span></span><br><span class="line">-s			<span class="comment">#匹配来源地址 IP/MASK，加 ！表示除这个 IP 外</span></span><br><span class="line">-d			<span class="comment">#匹配目标地址</span></span><br><span class="line">-i 网卡名称		<span class="comment">#匹配从这块网卡流入的数据</span></span><br><span class="line">-o 网卡名称		<span class="comment">#匹配从这块网卡流出的数据</span></span><br><span class="line">-p			<span class="comment">#匹配协议 如 TCP UDP ICMP等</span></span><br><span class="line">--dport num		<span class="comment">#匹配目标端口号</span></span><br><span class="line">--sport num		<span class="comment">#匹配来源端口号</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二-实验"><a href="#二-实验" class="headerlink" title="二.实验"></a>二.实验</h3><p>1）查看已有的防火墙规则链<br>iptables -L</p>
+<ol start="2">
+<li>清空已有的防火墙规则链<br>iptables -F</li>
+</ol>
+<p>3)把INPUT规则链的默认策略设置为拒绝<br>iptables -P ACCETP DROP<br>注意：规则链的默认策略拒绝动作只能是DROP,而不能是REJECT</p>
+<ol start="4">
+<li><p>向INPUT链中添加允许ICMP流量进入的策略规则（添加一条ICMP流量进入规则，允许ping命令检测行为<br>iptables -I INPUT -p icmp -j ACCEPT</p>
+</li>
+<li><p>删除INPUT规则链中4)中刚刚加入的那条策略，并把默认策略设置为允许<br>iptables -D INPUT 1  #我的INPUT策略中该策略为第一条<br>iptables -P INPUT ACCEPT</p>
+</li>
+<li><p>将INPUT规则链设置为只允许制定网段的主机访问本级的22端口，拒绝来自其他所有主机的流量（可以直接写IP地址，如对网段匹配则需要写为子网掩码的形式<br>iptables -I INPUT -s 192.168.10.0&#x2F;24 -p tcp –dport 22 -j ACCEPT<br>iptables -A INPUT -p tcp –dport 22 j REJECT<br>注意：防火墙的策略规则是从上到下顺序匹配的，所以一定要把允许动作放在拒绝动作之前！！！</p>
+</li>
+<li><p>向INPUT规则链中添加拒绝所有人访问本级12345端口的策略规则<br>iptables -I INPUT -p tcp –dport 12345 -j REJECT<br>iptables -I INPUT -p udp –dport 12345 -j REJECT</p>
+</li>
+<li><p>向INPUT规则链中添加拒绝192.168.10.5主机访问本机80端口的策略规则<br>iptables -I INPUT -p tcp -s 192.168.10.5 –dport 80 -j REJECT</p>
+</li>
+<li><p>向INPUT规则链中添加拒绝所有主机访问本机1000-1024端口的策略规则<br>iptables -A INPUT -p tcp –dport 1000:1024 -j REJECT<br>iptables -A INPUT -p udp –dport 1000:1024 -j REJECT</p>
+</li>
+</ol>
+<h3 id="特别注意：使用iptables命令配置防火墙规则默认会在系统下一次重启时失效，如果想让配置的防火墙策略永久生效，还要执行保存命令：-iptables-save"><a href="#特别注意：使用iptables命令配置防火墙规则默认会在系统下一次重启时失效，如果想让配置的防火墙策略永久生效，还要执行保存命令：-iptables-save" class="headerlink" title="特别注意：使用iptables命令配置防火墙规则默认会在系统下一次重启时失效，如果想让配置的防火墙策略永久生效，还要执行保存命令： iptables-save"></a>特别注意：使用iptables命令配置防火墙规则默认会在系统下一次重启时失效，如果想让配置的防火墙策略永久生效，还要执行保存命令： iptables-save</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/08/iptables-sudy/" data-id="cl0hn4jg10005axr95dqzge7x" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/08/iptables-sudy/" data-id="cl0hr6ubo0005zzr9gqug9w7i" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" rel="tag">Debian系统学习</a></li></ul>
+
     </footer>
   </div>
   
@@ -142,7 +166,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Debian%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">Debian系统学习</a> <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 20px;">小知识</a>
+      <a href="/tags/Debian%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">Debian系统学习</a> <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">小知识</a>
     </div>
   </div>
 
@@ -168,7 +192,7 @@
           </li>
         
           <li>
-            <a href="/2022/03/08/iptables-sudy/">iptables-sudy</a>
+            <a href="/2022/03/08/iptables-sudy/">iptables简单设置</a>
           </li>
         
           <li>
