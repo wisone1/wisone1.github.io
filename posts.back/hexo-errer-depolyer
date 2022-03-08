@@ -1,0 +1,25 @@
+
+hexo d命令报错 ERROR Deployer not found: git
+
+我已经在站点配置文件中写入了:
+
+Copy
+deploy:
+  type: git
+  repo: git@github.com:lanlan2017/lanlan2017.github.io.git  # Github pages地址
+  branch: master
+
+但是执行hexo d报错
+
+Copy
+ERROR Deployer not found: git
+
+解决方案
+
+这是因为没有安装hexo-deployer-git插件,在站点目录下输入下面的命令安装插件就好了
+
+Copy
+npm install hexo-deployer-git --save
+
+然后使用hexo d命令部署就行了
+
