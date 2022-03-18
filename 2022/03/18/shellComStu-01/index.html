@@ -17,20 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Hello World | Wis的blog</title>
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <title>Linux命令之开篇 | Wis的blog</title>
+  <meta name="description" content="执行命令的必备知识命令格式命令名称  [命令参数]  命令对象 命令名称：想要作的事情 命令参数：修改&#x2F;剪裁命令，使的命令执行结构符合用户需要 命令对象：要处理的文件&#x2F;目录&#x2F;用户等资源名称  注1：命令名称、命令参数、命令对象之间要用空格进行分隔，并且字母严格区分大小写注2：linux图书、说明中一般将可选择的、可加可不加的、非必须的参数使用括号引起来，而命令所需求的、必须有的参数或对象值则不带中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://wisone1.github.io/2022/03/01/hello-world/index.html">
+<meta property="og:title" content="Linux命令之开篇">
+<meta property="og:url" content="https://wisone1.github.io/2022/03/18/shellComStu-01/index.html">
 <meta property="og:site_name" content="Wis的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="执行命令的必备知识命令格式命令名称  [命令参数]  命令对象 命令名称：想要作的事情 命令参数：修改&#x2F;剪裁命令，使的命令执行结构符合用户需要 命令对象：要处理的文件&#x2F;目录&#x2F;用户等资源名称  注1：命令名称、命令参数、命令对象之间要用空格进行分隔，并且字母严格区分大小写注2：linux图书、说明中一般将可选择的、可加可不加的、非必须的参数使用括号引起来，而命令所需求的、必须有的参数或对象值则不带中">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-01T07:31:17.760Z">
-<meta property="article:modified_time" content="2022-03-01T07:31:17.760Z">
+<meta property="article:published_time" content="2022-03-18T00:35:16.000Z">
+<meta property="article:modified_time" content="2022-03-18T01:13:01.955Z">
 <meta property="article:author" content="wis">
+<meta property="article:tag" content="Linux新手命令">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://wisone1.github.io/2022/03/01/hello-world/index.html">
+  <link rel="canonical" href="https://wisone1.github.io/2022/03/18/shellComStu-01/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Wis的博客" type="application/atom+xml">
   
@@ -324,14 +325,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-hello-world" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-shellComStu-01" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Linux命令之开篇
     </h1>
   
 
@@ -339,12 +340,17 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2022/03/01/hello-world/" class="article-date">
-	  <time datetime="2022-03-01T07:31:17.760Z" itemprop="datePublished">2022-03-01</time>
+	<a href="/2022/03/18/shellComStu-01/" class="article-date">
+	  <time datetime="2022-03-18T00:35:16.000Z" itemprop="datePublished">2022-03-18</time>
 	</a>
 </span>
         
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Linux%E6%96%B0%E6%89%8B%E5%91%BD%E4%BB%A4/" rel="tag">Linux新手命令</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -355,25 +361,45 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/03/01/hello-world/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/03/18/shellComStu-01/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="执行命令的必备知识"><a href="#执行命令的必备知识" class="headerlink" title="执行命令的必备知识"></a>执行命令的必备知识</h1><h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code>命令名称  [命令参数]  命令对象
+命令名称：想要作的事情
+命令参数：修改/剪裁命令，使的命令执行结构符合用户需要
+命令对象：要处理的文件/目录/用户等资源名称
+</code></pre>
+<h3 id="注1：命令名称、命令参数、命令对象之间要用空格进行分隔，并且字母严格区分大小写"><a href="#注1：命令名称、命令参数、命令对象之间要用空格进行分隔，并且字母严格区分大小写" class="headerlink" title="注1：命令名称、命令参数、命令对象之间要用空格进行分隔，并且字母严格区分大小写"></a>注1：命令名称、命令参数、命令对象之间要用空格进行分隔，并且字母严格区分大小写</h3><h3 id="注2：linux图书、说明中一般将可选择的、可加可不加的、非必须的参数使用括号引起来，而命令所需求的、必须有的参数或对象值则不带中括号或带大括号"><a href="#注2：linux图书、说明中一般将可选择的、可加可不加的、非必须的参数使用括号引起来，而命令所需求的、必须有的参数或对象值则不带中括号或带大括号" class="headerlink" title="注2：linux图书、说明中一般将可选择的、可加可不加的、非必须的参数使用括号引起来，而命令所需求的、必须有的参数或对象值则不带中括号或带大括号"></a>注2：linux图书、说明中一般将可选择的、可加可不加的、非必须的参数使用括号引起来，而命令所需求的、必须有的参数或对象值则不带中括号或带大括号</h3><h3 id="帮助命令-man"><a href="#帮助命令-man" class="headerlink" title="帮助命令 man"></a>帮助命令 man</h3><h4 id="命令格式：-man-ls-：查看ls命令相关帮助文档"><a href="#命令格式：-man-ls-：查看ls命令相关帮助文档" class="headerlink" title="命令格式： man ls  ：查看ls命令相关帮助文档"></a>命令格式： man ls  ：查看ls命令相关帮助文档</h4><pre><code>man命令中常用按键及其作用
+PaGe down    向下翻页  作用同 空格
+PaGe up    向上翻页
+home    前往首页
+end        前往末页
+/        从上至下搜索某个关键词，如 &quot;/linux&quot;
+?        从下至上搜索某个关键词，如 &quot;?linux&quot;
+n        定位到下一个搜索到的关键词
+N        定位到上一个搜索到的关键词
+q        退出帮助文档
+</code></pre>
+<h4 id="man命令中帮助信息的结构及其代表意义"><a href="#man命令中帮助信息的结构及其代表意义" class="headerlink" title="man命令中帮助信息的结构及其代表意义"></a>man命令中帮助信息的结构及其代表意义</h4><pre><code>NAME    命令名称
+SYNOPSIS    参数的大致使用方法
+DESCRIPTION 介绍说明
+EXAMPLES    演示（附带简单说明）
+OVERVIEW    概述
+DEFAULTS    默认的功能
+OPTIONS    具体的可用选项（带介绍）
+ENVIRONMENT 环境变量
+FILES    用到的文件
+SEE ALSO    相关资料
+HISTORY    维护历史及联系方式
+</code></pre>
+<h1 id="几个小技巧"><a href="#几个小技巧" class="headerlink" title="几个小技巧"></a>几个小技巧</h1><h3 id="下面快捷及组合全部为小写"><a href="#下面快捷及组合全部为小写" class="headerlink" title="下面快捷及组合全部为小写"></a>下面快捷及组合全部为小写</h3><pre><code>TAB        补全命令
+CTRL+C    终止当前进程的运行
+CTRL+D    结束键盘输入
+CTRL+L    清屏
+</code></pre>
 
       
     </div>
@@ -383,7 +409,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://wisone1.github.io/2022/03/01/hello-world/" title="Hello World" target="_blank" rel="external">https://wisone1.github.io/2022/03/01/hello-world/</a>
+      <a href="https://wisone1.github.io/2022/03/18/shellComStu-01/" title="Linux命令之开篇" target="_blank" rel="external">https://wisone1.github.io/2022/03/18/shellComStu-01/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -429,10 +455,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2022/03/01/My-New-Post/" title="Debian 清除已删除软件包的配置文件"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/2022/03/08/root-login/" title="Debian 设置root用户登陆"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
   </ul>
