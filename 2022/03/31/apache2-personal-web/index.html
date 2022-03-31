@@ -18,15 +18,15 @@
   
   
   <title>Debian下apache2启用个人主页功能 | Wis的blog</title>
-  <meta name="description" content="Debian下apache2启用个人主页功能1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限123mkdir public_htmlchmod 755 public_htmlecho &quot;This is a persenal website&quot; &gt; index.html  #创建一个网页文件 2.启用模块，并重新启动服务12a2enmod">
+  <meta name="description" content="Debian下apache2启用个人主页功能1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限1234mkdir public_htmlchmod 755 public_htmlcd public_html					#进入目录echo &quot;This is a persenal website&quot; &gt; index.html  #创建一个网页文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Debian下apache2启用个人主页功能">
 <meta property="og:url" content="https://wisone1.github.io/2022/03/31/apache2-personal-web/index.html">
 <meta property="og:site_name" content="Wis的博客">
-<meta property="og:description" content="Debian下apache2启用个人主页功能1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限123mkdir public_htmlchmod 755 public_htmlecho &quot;This is a persenal website&quot; &gt; index.html  #创建一个网页文件 2.启用模块，并重新启动服务12a2enmod">
+<meta property="og:description" content="Debian下apache2启用个人主页功能1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限1234mkdir public_htmlchmod 755 public_htmlcd public_html					#进入目录echo &quot;This is a persenal website&quot; &gt; index.html  #创建一个网页文件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-31T02:52:26.000Z">
-<meta property="article:modified_time" content="2022-03-31T03:05:22.007Z">
+<meta property="article:modified_time" content="2022-03-31T03:11:00.446Z">
 <meta property="article:author" content="wis">
 <meta property="article:tag" content="小知识">
 <meta name="twitter:card" content="summary">
@@ -367,7 +367,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="Debian下apache2启用个人主页功能"><a href="#Debian下apache2启用个人主页功能" class="headerlink" title="Debian下apache2启用个人主页功能"></a>Debian下apache2启用个人主页功能</h3><h4 id="1-首先在用户-XXX-家目录下建立个人主页目录-public-html-并设置权限"><a href="#1-首先在用户-XXX-家目录下建立个人主页目录-public-html-并设置权限" class="headerlink" title="1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限"></a>1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir public_html</span><br><span class="line">chmod 755 public_html</span><br><span class="line">echo &quot;This is a persenal website&quot; &gt; index.html  #创建一个网页文件</span><br></pre></td></tr></table></figure>
+        <h3 id="Debian下apache2启用个人主页功能"><a href="#Debian下apache2启用个人主页功能" class="headerlink" title="Debian下apache2启用个人主页功能"></a>Debian下apache2启用个人主页功能</h3><h4 id="1-首先在用户-XXX-家目录下建立个人主页目录-public-html-并设置权限"><a href="#1-首先在用户-XXX-家目录下建立个人主页目录-public-html-并设置权限" class="headerlink" title="1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限"></a>1.首先在用户 XXX 家目录下建立个人主页目录 public_html,并设置权限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir public_html</span><br><span class="line">chmod 755 public_html</span><br><span class="line">cd public_html					#进入目录</span><br><span class="line">echo &quot;This is a persenal website&quot; &gt; index.html  #创建一个网页文件</span><br></pre></td></tr></table></figure>
 <h4 id="2-启用模块，并重新启动服务"><a href="#2-启用模块，并重新启动服务" class="headerlink" title="2.启用模块，并重新启动服务"></a>2.启用模块，并重新启动服务</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a2enmod userdir</span><br><span class="line">/etc/init.d/apache2 reload</span><br></pre></td></tr></table></figure>
 <h4 id="3-以下网址访问页面"><a href="#3-以下网址访问页面" class="headerlink" title="3.以下网址访问页面"></a>3.以下网址访问页面</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/~XXX/		#XXX 为用户名，一定注意带 ~ 号</span><br></pre></td></tr></table></figure>
 
