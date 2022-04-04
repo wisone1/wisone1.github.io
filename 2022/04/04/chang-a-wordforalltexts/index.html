@@ -17,18 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2022/3 | Wis的blog</title>
-  <meta name="description" content="wis的学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wis的博客">
-<meta property="og:url" content="https://wisone1.github.io/archives/2022/03/page/2/index.html">
+  <title>替换某个目录下所有文件的关键字 | Wis的blog</title>
+  <meta name="description" content="替换某个目录下所有文件的关键字，包括嵌套目录1grep &amp;#x27;bb&amp;#x27; -rl .&#x2F;* | xargs -i sed -i  &quot;s&#x2F;bb&#x2F;aaaa&#x2F;g&quot; &amp;#123;&amp;#125; 即将当前路径下所有文件中包含bb的文件，其中关键字bb都改为aaaa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="替换某个目录下所有文件的关键字">
+<meta property="og:url" content="https://wisone1.github.io/2022/04/04/chang-a-wordforalltexts/index.html">
 <meta property="og:site_name" content="Wis的博客">
-<meta property="og:description" content="wis的学习笔记">
+<meta property="og:description" content="替换某个目录下所有文件的关键字，包括嵌套目录1grep &amp;#x27;bb&amp;#x27; -rl .&#x2F;* | xargs -i sed -i  &quot;s&#x2F;bb&#x2F;aaaa&#x2F;g&quot; &amp;#123;&amp;#125; 即将当前路径下所有文件中包含bb的文件，其中关键字bb都改为aaaa">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-04T13:59:14.000Z">
+<meta property="article:modified_time" content="2022-04-04T14:02:10.184Z">
 <meta property="article:author" content="wis">
+<meta property="article:tag" content="Debian系统学习">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://wisone1.github.io/archives/2022/03/page/2/index.html">
+  <link rel="canonical" href="https://wisone1.github.io/2022/04/04/chang-a-wordforalltexts/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Wis的博客" type="application/atom+xml">
   
@@ -321,144 +324,173 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2022/3</h1>
-	      <p class="text-muted">共 19 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-chang-a-wordforalltexts" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      替换某个目录下所有文件的关键字
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2022" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2022
-            </a>
-            <!-- <a href="/archives/2022" class="archive-year">2022</a> -->
-          </h3>
-        </div>
-        <div id="collapse2022" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2022">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2022/03/08/iptables-sudy/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-08T04:21:43.000Z" itemprop="datePublished">2022-03-08</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> iptables简单设置
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/04/04/chang-a-wordforalltexts/" class="article-date">
+	  <time datetime="2022-04-04T13:59:14.000Z" itemprop="datePublished">2022-04-04</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Debian%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" rel="tag">Debian系统学习</a>
+  </span>
 
 
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/04/04/chang-a-wordforalltexts/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="替换某个目录下所有文件的关键字，包括嵌套目录"><a href="#替换某个目录下所有文件的关键字，包括嵌套目录" class="headerlink" title="替换某个目录下所有文件的关键字，包括嵌套目录"></a>替换某个目录下所有文件的关键字，包括嵌套目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &#x27;bb&#x27; -rl ./* | xargs -i sed -i  &quot;s/bb/aaaa/g&quot; &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="即将当前路径下所有文件中包含bb的文件，其中关键字bb都改为aaaa"><a href="#即将当前路径下所有文件中包含bb的文件，其中关键字bb都改为aaaa" class="headerlink" title="即将当前路径下所有文件中包含bb的文件，其中关键字bb都改为aaaa"></a>即将当前路径下所有文件中包含bb的文件，其中关键字bb都改为aaaa</h4>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://wisone1.github.io/2022/04/04/chang-a-wordforalltexts/" title="替换某个目录下所有文件的关键字" target="_blank" rel="external">https://wisone1.github.io/2022/04/04/chang-a-wordforalltexts/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://wisone1.github.io" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://wisone1.github.io" target="_blank"><span class="text-dark">Wis</span><small class="ml-1x">Wis的学习笔记</small></a></h3>
+        <div>一个散漫的人。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
-    
-    
-<a href="/2022/03/04/apt-dpkg/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-04T05:12:54.000Z" itemprop="datePublished">2022-03-04</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> apt-get 与 dpkg 参数
-</a>
-
-
-  
-    
-    
-    
-<a href="/2022/03/03/seting-path/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-02T16:22:58.000Z" itemprop="datePublished">2022-03-03</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 设置环境变量
-</a>
-
-
-  
-    
-    
-    
-<a href="/2022/03/02/make-a-blog1/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-02T15:19:45.000Z" itemprop="datePublished">2022-03-02</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Debian10搭建博客系统(二)
-</a>
-
-
-  
-    
-    
-    
-<a href="/2022/03/02/install-atom/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-02T12:24:57.000Z" itemprop="datePublished">2022-03-02</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Debian安装atom文本编辑器
-</a>
-
-
-  
-    
-    
-    
-<a href="/2022/03/02/make-a-blog/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-02T01:49:23.000Z" itemprop="datePublished">2022-03-02</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Debian10搭建博客系统（一）
-</a>
-
-
-  
-    
-    
-    
-<a href="/2022/03/01/My-New-Post/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-01T07:53:38.000Z" itemprop="datePublished">2022-03-01</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Debian 清除已删除软件包的配置文件
-</a>
-
-
-  
-    
-    
-    
-<a href="/2022/03/01/hello-world/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-01T07:31:17.760Z" itemprop="datePublished">2022-03-01</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hello World
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
+  <section id="comments">
   	
+      <div id="vcomments"></div>
     
-    <nav class="bar bar-footer clearfix" data-stick-bottom>
-        <div class="bar-inner">
-        <ul class="pager pull-left">
-            
-            <li class="prev">
-                <a href="/archives/2022/03/">
-                    <i class="icon icon-angle-left"></i>
-                    上一页
-                </a>
-            </li>
-            
-            
-            <li class="next disabled">
-                <a href="javascript:;">
-                    下一页
-                    <i class="icon icon-angle-right"></i>                    
-                </a>
-            </li>
-            
-        </ul>
-            <div class="total-article bar-right">Page 2 of 2</div>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2022/03/31/search-commd/" title="查看命令属于那个软件包"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/pay_zfb.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/pay_weixin.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    
- 	
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -513,6 +545,39 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'N7IKyhhIpDqd8JLoV8HD96C0-gzGzoHsz',
+    appKey: 'zMmQWVVEsLsbW40KRUaYAatR',
+    placeholder: '留个评论，支持一下。。。',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
